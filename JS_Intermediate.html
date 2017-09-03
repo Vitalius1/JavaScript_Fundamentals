@@ -19,7 +19,7 @@
             }
         }
         drawStars([4,6,1,3,5,7,25]);
-        
+
 //============================================================================
         console.log("---------- Part III -------------")
         function drawStars(arr){
@@ -29,7 +29,7 @@
                     // if true than take it's first character use toLowerCase string method and repeat it how long is the string
                     console.log(arr[i][0].toLowerCase().repeat(arr[i].length));
                 }
-                else{
+                else if(arr[i].constructor === Number){
                     // again reusing first function for each element of an array which is not a string
                     starString(arr[i]);
                 }
