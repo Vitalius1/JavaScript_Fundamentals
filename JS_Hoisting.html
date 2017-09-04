@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <script>
+    //=====================================================================================
+        // chalange 1
+        console.log(hello);
+        var hello = 'world';
+        // the console will print out "undefined"
+
+    //=====================================================================================
+        // chalange 2
+        var needle = 'haystack';
+        test();
+        function test() {
+            var needle = 'magnet';
+            console.log(needle);
+        }
+        // the console will print out "magnet"
+
+    //=====================================================================================
+        // chalange 3
+        var brendan = 'super cool';
+        function print() {
+            brendan = 'only okay';
+            console.log(brendan);
+        }
+        print(); // this will change the console output according to my first assumption.
+        console.log(brendan);
+        // the console will print out twice "only okay" (my first assumption was wrong (:...)
+        // after looking at the result I understood why it's printing "super cool"
+        // the function print never was invoked to change the value of global variable brendan
+        // also consequently the console.log from within the function will not be executed
+
+    //=====================================================================================
+        // chalange 4
+        var food = 'chicken';
+        console.log(food);
+        eat();
+        function eat() {
+            food = 'half-chicken';
+            console.log(food);
+            // var food = ‘gone’; - wrong
+            var food = 'gone';
+        }
+        // syntax error because of wrong quotation signs used inside function eat.
+        // if changed to the rigth ones my first assumption is that the console output will be:
+        // "chicken" and then "half-chicken" (I was right !!!)
+
+    //=====================================================================================
+        // chalange 5
+        // mean();
+        // console.log(food);
+        // var mean = function () {
+        //     food = "chicken";
+        //     console.log(food);
+        //     var food = "fish";
+        //     console.log(food);
+        // }
+        // console.log(food);
+        // the declaration of the variable "mean" will be hoisted to the top so trying to invoke it as
+        // a function right from the first line will throw an error cause we didn't yet assigned a
+        // function to it. (I was correct!!!)
+
+    //=====================================================================================
+        // chalange 6
+        console.log(genre);
+        var genre = "disco";
+        rewind();
+        function rewind() {
+            genre = "rock";
+            console.log(genre);
+            var genre = "r&b";
+            console.log(genre);
+        }
+        console.log(genre);
+        // first the console will output "undefined", than "rock", than "r&b", than "disco".
+        // (I was right !!!)
+
+    //=====================================================================================
+        // chalange 7
+        dojo = "san jose";
+        console.log(dojo);
+        learn();
+        function learn() {
+            dojo = "seattle";
+            console.log(dojo);
+            var dojo = "burbank";
+            console.log(dojo);
+        }
+        console.log(dojo);
+        // "san jose" / "seattle" / "burbank" / "san jose" (I was right !!!!)
+
+    //=====================================================================================
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
